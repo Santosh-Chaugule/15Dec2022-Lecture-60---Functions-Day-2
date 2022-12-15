@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lecture 60 - Functions Day 2</title>
+    <style></style>
+    <script></script>
+  </head>
+  <body>
+    <form action="">
+      <input type="text" name="fname" placeholder="Enter your first name" />
+      <input type="text" name="lname" placeholder="Enter your last name" />
+      <input type="submit" value="Save" onclick="saveData(event)" />
+      <!-- onevent="somejscode" -->
+    </form>
+    <ul id="myul">
+      <li></li>
+    </ul>
+
+    <script>
+      //Global variable "myul"
+      let myul = document.getElementById("myul");
+      myul.innerHTML = "";
+      //function is reusable block of code
+      //function <function name>(){//function body}
+      //purpose of function is return something or some result.
+
+      //1.function definastion
+      function saveData(e) {
+        //e=event= formal argument
+        e.preventDefault();
+        console.log("ok");
+
+        let fn = document.querySelector('input[name="fname"]');
+
+        let sn = document.querySelector('input[name="lname"]');
+
+        console.log(fn.value);
+        console.log(sn.value);
+
+        myul.innerHTML += "<li>" + fn.value + " " + sn.value + "</li>";
+      }
+      //object.property
+      //object.method() methos=function
+    </script>
+  </body>
+</html>
